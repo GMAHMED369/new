@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(106, 106, 106);
+}
+.container{
+    background-color: #4b4949;
+    text-align: center;
+    align-items: center;
+    margin-top: 55px;
+     width: 100%;
+    height: 46vh;
+     margin-top: 55px;
+}
+.containt{
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+    padding: 55px;
+}
+#Azu{
+    padding: 10px;
+    margin: 0px;
+    text-decoration: underline;
+    color: #4394d0;
+    font-size: 40px;
+}
+h2{
+    margin-top: 10px;
+    color: wheat;
+    font-family: 'Bakbak One', cursive;
+    font-size: 32px;
+
+}
+#ind{
+    margin: 20px;
+    padding: 10px;
+    color: #faa24d;
+font-size: 80px;
+}
