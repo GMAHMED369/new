@@ -1,0 +1,51 @@
+{
+    "name": "US-server-1",
+    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Compute/virtualMachines/US-server-1",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "westus3",
+    "properties": {
+        "vmId": "fd4769d8-152e-4180-b23b-a5a8c4c68363",
+        "hardwareProfile": {
+            "vmSize": "Standard_B1s"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "canonical",
+                "offer": "0001-com-ubuntu-server-focal",
+                "sku": "20_04-lts-gen2",
+                "version": "latest"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "US-server-1_disk1_113f1dc2e33a4a52ba626da694bad7ea",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/PROJECT-1-US/providers/Microsoft.Compute/disks/US-server-1_disk1_113f1dc2e33a4a52ba626da694bad7ea"
+                },
+                "diskSizeGB": 30
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "US-server-1",
+            "adminUsername": "gm",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": false
+            },
+            "secrets": []
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/networkInterfaces/us-server-161",
+                    "properties": {
+                        "deleteOption": "Detach"
+                    }
+                }
+            ]
+        },
+        "provisioningState": "Succeeded"
+    }
+}

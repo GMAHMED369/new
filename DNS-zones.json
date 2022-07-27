@@ -1,0 +1,19 @@
+{
+    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/project-1-us/providers/Microsoft.Network/dnszones/azure-project.cf",
+    "name": "azure-project.cf",
+    "type": "Microsoft.Network/dnszones",
+    "etag": "9863ae39-338b-449e-857a-f36761445839",
+    "location": "global",
+    "tags": {},
+    "properties": {
+        "maxNumberOfRecordSets": 10000,
+        "maxNumberOfRecordsPerRecordSet": null,
+        "nameServers": [
+            "ns1-37.azure-dns.com.",
+            "ns2-37.azure-dns.net.",
+            "ns3-37.azure-dns.org.",
+            "ns4-37.azure-dns.info."
+        ],
+        "numberOfRecordSets": 3
+    }
+}

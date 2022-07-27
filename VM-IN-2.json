@@ -1,0 +1,51 @@
+{
+    "name": "Indian-server-2",
+    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Compute/virtualMachines/Indian-server-2",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "japaneast",
+    "properties": {
+        "vmId": "03ff8e78-c2fe-4346-b5ea-f37050ea81ae",
+        "hardwareProfile": {
+            "vmSize": "Standard_B1s"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "canonical",
+                "offer": "0001-com-ubuntu-server-focal",
+                "sku": "20_04-lts-gen2",
+                "version": "latest"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "Indian-server-2_disk1_b9d7ab2fde79484f9b85ec18c8fad340",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/PROJECT-1/providers/Microsoft.Compute/disks/Indian-server-2_disk1_b9d7ab2fde79484f9b85ec18c8fad340"
+                },
+                "diskSizeGB": 30
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "Indian-server-2",
+            "adminUsername": "gm",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": false
+            },
+            "secrets": []
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/networkInterfaces/indian-server-2939",
+                    "properties": {
+                        "deleteOption": "Detach"
+                    }
+                }
+            ]
+        },
+        "provisioningState": "Succeeded"
+    }
+}

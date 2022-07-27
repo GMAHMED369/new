@@ -1,0 +1,164 @@
+{
+    "name": "ag-india",
+    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india",
+    "etag": "W/\"f8695390-e929-4446-80f1-04b8d93f0995\"",
+    "type": "Microsoft.Network/applicationGateways",
+    "location": "japaneast",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "5d30fb14-fc91-4f13-b1bf-b19674757a4a",
+        "sku": {
+            "name": "Standard_v2",
+            "tier": "Standard_v2"
+        },
+        "operationalState": "Running",
+        "gatewayIPConfigurations": [
+            {
+                "name": "appGatewayIpConfig",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/gatewayIPConfigurations/appGatewayIpConfig",
+                "etag": "W/\"f8695390-e929-4446-80f1-04b8d93f0995\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "subnet": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/virtualNetworks/Project-1-vnet/subnets/ag-subnet"
+                    }
+                },
+                "type": "Microsoft.Network/applicationGateways/gatewayIPConfigurations"
+            }
+        ],
+        "sslCertificates": [],
+        "frontendIPConfigurations": [
+            {
+                "name": "appGwPublicFrontendIp",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/frontendIPConfigurations/appGwPublicFrontendIp",
+                "etag": "W/\"f8695390-e929-4446-80f1-04b8d93f0995\"",
+                "type": "Microsoft.Network/applicationGateways/frontendIPConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "publicIPAddress": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/publicIPAddresses/ag-india"
+                    },
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/httpListeners/mylistener"
+                        }
+                    ]
+                }
+            }
+        ],
+        "frontendPorts": [
+            {
+                "name": "port_80",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/frontendPorts/port_80",
+                "etag": "W/\"f8695390-e929-4446-80f1-04b8d93f0995\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "port": 80,
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/httpListeners/mylistener"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/frontendPorts"
+            }
+        ],
+        "backendAddressPools": [
+            {
+                "name": "indiabackend",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/backendAddressPools/indiabackend",
+                "etag": "W/\"f8695390-e929-4446-80f1-04b8d93f0995\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "backendIPConfigurations": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/networkInterfaces/indian-server665/ipConfigurations/ipconfig1"
+                        },
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/networkInterfaces/indian-server-2939/ipConfigurations/ipconfig1"
+                        }
+                    ],
+                    "backendAddresses": [],
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/requestRoutingRules/indiarule"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/backendAddressPools"
+            }
+        ],
+        "backendHttpSettingsCollection": [
+            {
+                "name": "backendindia",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/backendHttpSettingsCollection/backendindia",
+                "etag": "W/\"f8695390-e929-4446-80f1-04b8d93f0995\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "port": 80,
+                    "protocol": "Http",
+                    "cookieBasedAffinity": "Disabled",
+                    "pickHostNameFromBackendAddress": false,
+                    "requestTimeout": 20,
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/requestRoutingRules/indiarule"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/backendHttpSettingsCollection"
+            }
+        ],
+        "httpListeners": [
+            {
+                "name": "mylistener",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/httpListeners/mylistener",
+                "etag": "W/\"f8695390-e929-4446-80f1-04b8d93f0995\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "frontendIPConfiguration": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/frontendIPConfigurations/appGwPublicFrontendIp"
+                    },
+                    "frontendPort": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/frontendPorts/port_80"
+                    },
+                    "protocol": "Http",
+                    "requireServerNameIndication": false,
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/requestRoutingRules/indiarule"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/httpListeners"
+            }
+        ],
+        "urlPathMaps": [],
+        "requestRoutingRules": [
+            {
+                "name": "indiarule",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/requestRoutingRules/indiarule",
+                "etag": "W/\"f8695390-e929-4446-80f1-04b8d93f0995\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "ruleType": "Basic",
+                    "httpListener": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/httpListeners/mylistener"
+                    },
+                    "backendAddressPool": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/backendAddressPools/indiabackend"
+                    },
+                    "backendHttpSettings": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/backendHttpSettingsCollection/backendindia"
+                    }
+                },
+                "type": "Microsoft.Network/applicationGateways/requestRoutingRules"
+            }
+        ],
+        "probes": [],
+        "redirectConfigurations": [],
+        "enableHttp2": false
+    }
+}

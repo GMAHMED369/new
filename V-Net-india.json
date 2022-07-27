@@ -1,0 +1,51 @@
+{
+    "name": "Project-1-vnet",
+    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/virtualNetworks/Project-1-vnet",
+    "etag": "W/\"28ee60b7-7e77-44e0-9ec2-4731f8c12721\"",
+    "type": "Microsoft.Network/virtualNetworks",
+    "location": "japaneast",
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "75ec12ae-a702-4296-a809-8a54d5f8d2ab",
+        "addressSpace": {
+            "addressPrefixes": [
+                "10.0.0.0/16"
+            ]
+        },
+        "subnets": [
+            {
+                "name": "default",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/virtualNetworks/Project-1-vnet/subnets/default",
+                "etag": "W/\"28ee60b7-7e77-44e0-9ec2-4731f8c12721\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "10.0.0.0/24",
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/networkInterfaces/indian-server665/ipConfigurations/ipconfig1"
+                        },
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/networkInterfaces/indian-server-2939/ipConfigurations/ipconfig1"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "ag-subnet",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/virtualNetworks/Project-1-vnet/subnets/ag-subnet",
+                "etag": "W/\"28ee60b7-7e77-44e0-9ec2-4731f8c12721\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "10.0.1.0/24",
+                    "applicationGatewayIPConfigurations": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/applicationGateways/ag-india/gatewayIPConfigurations/appGatewayIpConfig"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            }
+        ]
+    }
+}
