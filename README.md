@@ -28,6 +28,7 @@ here i have created two servers for each i.e. for indian users and other users s
 11. Click on Review+Create and create. (done)
 12. Goto your VM > Networking > indbound port rules > add rule and do the following.
 ![image](https://user-images.githubusercontent.com/74852695/181095185-1bcdfbe1-eaf9-4fcc-82b2-f9e1c04ba9cf.png)
+
 This is required for allowing http port on vm.
 > Make 2-2 VMs in same region, resource group and V-Net.
 
@@ -35,4 +36,51 @@ This is required for allowing http port on vm.
 * Firstly SSH into server using terminal command (ssh username@publicIp )
 * Installed Apache 2 in all servers (terminal: sudo apt-get install apache2)
 * Changed the index.html file in /var/www/html with my index.html file and index.css file
-* Opened my public ip on browser and check if it is running. (it works)
+* Opened my public ip on browser and check if it is running. (it works!!)
+![image](https://www.server-world.info/en/note?os=Ubuntu_20.04&p=httpd&f=1)
+
+
+### 4. Creating Application Gateways
+* Search for application gateway and click click on create (Create 2).
+![image](https://user-images.githubusercontent.com/74852695/181168515-b6efcde0-9203-4f3d-9337-fe507599ede8.png)
+
+* Fill the details respected to different servers.
+* Add frontend and Backend pool respectively.
+* Review + Create
+* After creating the application gateways try to search for gateway ip in browser to see if it is working i.e. it will land you on different server when you refresh it.
+> Indian Server 1 ![image](https://user-images.githubusercontent.com/74852695/181169125-36693732-a0c6-4205-98a5-64a59318f8c0.png)
+> Indian Server 2 ![image](https://user-images.githubusercontent.com/74852695/181169466-ccd65727-42df-4fa8-97e2-cd3dbbfaa5c9.png)
+
+
+### Create Traffic Manager
+* To manage the traffic over servers I have created traffic manager by searching and clicking on 'create'
+* Named the Traffic manager and Routing method will be Geographic.
+* Choose the same resource group used in US servers. 
+* Review + Create
+* After successfully creating traffic manager go to Endpoints and add 2 new endpoints.
+* For india![image](https://user-images.githubusercontent.com/74852695/181176541-d4417af6-d44d-4beb-9701-85c4a68d2c56.png)
+* For Others![image](https://user-images.githubusercontent.com/74852695/181176729-7f653dec-8e94-4c66-8b32-fdc6be83ab0b.png)
+
+
+### Create a DNS zone
+* Created DNS Zone using Azure search option and 'Create'
+* Give same resource group as of US Servers
+* Location will be global
+* Create
+
+### Used Freenom Free domain
+* To get the free domain for my project i used www.freenom.com
+* Registered there and searched for domain of my choice (azure-project.cf)
+![image](https://user-images.githubusercontent.com/74852695/181171393-580427d7-5031-44f7-9dbd-a0ecadd090d9.png)
+
+* Bought at 0.00$ 
+
+### Attaching domain name to DNS zone
+* Free domain to be attached to azure DNS zone
+* Copy all the Name Servers and paste it in the domain in freenom.
+* Open DNS Zone and click on 'Record Set'
+* Enter Details as shown in image below,
+* ![image](https://user-images.githubusercontent.com/74852695/181172291-077432fb-1d46-42f7-9e29-3ccc583e9699.png)
+* Go to resource groups and add rules as per requirements
+
+# The Project is Ready!
