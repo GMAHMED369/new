@@ -84,3 +84,5 @@ This is required for allowing http port on vm.
 * Go to resource groups and add rules as per requirements
 
 # The Project is Ready!
+
+Check if the project works correctly by searching the domain name in browser and try searching with connecting US-VPN and and without VPN.
