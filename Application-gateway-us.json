@@ -1,0 +1,164 @@
+{
+    "name": "US-server1",
+    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1",
+    "etag": "W/\"f72d122a-ef20-44e5-ab86-e8ed30dc7670\"",
+    "type": "Microsoft.Network/applicationGateways",
+    "location": "westus3",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "0f47533a-d771-43f9-9a74-f5b65b614c65",
+        "sku": {
+            "name": "Standard_v2",
+            "tier": "Standard_v2"
+        },
+        "operationalState": "Running",
+        "gatewayIPConfigurations": [
+            {
+                "name": "appGatewayIpConfig",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/gatewayIPConfigurations/appGatewayIpConfig",
+                "etag": "W/\"f72d122a-ef20-44e5-ab86-e8ed30dc7670\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "subnet": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/virtualNetworks/Project-1-us-vnet/subnets/ag-subnet"
+                    }
+                },
+                "type": "Microsoft.Network/applicationGateways/gatewayIPConfigurations"
+            }
+        ],
+        "sslCertificates": [],
+        "frontendIPConfigurations": [
+            {
+                "name": "appGwPublicFrontendIp",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/frontendIPConfigurations/appGwPublicFrontendIp",
+                "etag": "W/\"f72d122a-ef20-44e5-ab86-e8ed30dc7670\"",
+                "type": "Microsoft.Network/applicationGateways/frontendIPConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "publicIPAddress": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/publicIPAddresses/ag-ip-us"
+                    },
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/httpListeners/listener-us"
+                        }
+                    ]
+                }
+            }
+        ],
+        "frontendPorts": [
+            {
+                "name": "port_80",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/frontendPorts/port_80",
+                "etag": "W/\"f72d122a-ef20-44e5-ab86-e8ed30dc7670\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "port": 80,
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/httpListeners/listener-us"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/frontendPorts"
+            }
+        ],
+        "backendAddressPools": [
+            {
+                "name": "us-pool",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/backendAddressPools/us-pool",
+                "etag": "W/\"f72d122a-ef20-44e5-ab86-e8ed30dc7670\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "backendIPConfigurations": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/networkInterfaces/us-server-161/ipConfigurations/ipconfig1"
+                        },
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/networkInterfaces/us-server-2368/ipConfigurations/ipconfig1"
+                        }
+                    ],
+                    "backendAddresses": [],
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/requestRoutingRules/firstrule"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/backendAddressPools"
+            }
+        ],
+        "backendHttpSettingsCollection": [
+            {
+                "name": "backed-us",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/backendHttpSettingsCollection/backed-us",
+                "etag": "W/\"f72d122a-ef20-44e5-ab86-e8ed30dc7670\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "port": 80,
+                    "protocol": "Http",
+                    "cookieBasedAffinity": "Disabled",
+                    "pickHostNameFromBackendAddress": false,
+                    "requestTimeout": 20,
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/requestRoutingRules/firstrule"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/backendHttpSettingsCollection"
+            }
+        ],
+        "httpListeners": [
+            {
+                "name": "listener-us",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/httpListeners/listener-us",
+                "etag": "W/\"f72d122a-ef20-44e5-ab86-e8ed30dc7670\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "frontendIPConfiguration": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/frontendIPConfigurations/appGwPublicFrontendIp"
+                    },
+                    "frontendPort": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/frontendPorts/port_80"
+                    },
+                    "protocol": "Http",
+                    "requireServerNameIndication": false,
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/requestRoutingRules/firstrule"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/httpListeners"
+            }
+        ],
+        "urlPathMaps": [],
+        "requestRoutingRules": [
+            {
+                "name": "firstrule",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/requestRoutingRules/firstrule",
+                "etag": "W/\"f72d122a-ef20-44e5-ab86-e8ed30dc7670\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "ruleType": "Basic",
+                    "httpListener": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/httpListeners/listener-us"
+                    },
+                    "backendAddressPool": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/backendAddressPools/us-pool"
+                    },
+                    "backendHttpSettings": {
+                        "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/backendHttpSettingsCollection/backed-us"
+                    }
+                },
+                "type": "Microsoft.Network/applicationGateways/requestRoutingRules"
+            }
+        ],
+        "probes": [],
+        "redirectConfigurations": [],
+        "enableHttp2": false
+    }
+}

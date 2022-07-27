@@ -1,0 +1,8 @@
+{
+    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us",
+    "name": "Project-1-us",
+    "location": "westus3",
+    "properties": {
+        "provisioningState": "Succeeded"
+    }
+}

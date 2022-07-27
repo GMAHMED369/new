@@ -1,0 +1,51 @@
+{
+    "name": "Project-1-us-vnet",
+    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/virtualNetworks/Project-1-us-vnet",
+    "etag": "W/\"9824ef9f-6389-44c2-b039-f475fe4f290a\"",
+    "type": "Microsoft.Network/virtualNetworks",
+    "location": "westus3",
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "6167af42-34ae-4579-8d33-279527ff3f58",
+        "addressSpace": {
+            "addressPrefixes": [
+                "10.1.0.0/16"
+            ]
+        },
+        "subnets": [
+            {
+                "name": "default",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/virtualNetworks/Project-1-us-vnet/subnets/default",
+                "etag": "W/\"9824ef9f-6389-44c2-b039-f475fe4f290a\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "10.1.0.0/24",
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/networkInterfaces/us-server-161/ipConfigurations/ipconfig1"
+                        },
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/networkInterfaces/us-server-2368/ipConfigurations/ipconfig1"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "ag-subnet",
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/virtualNetworks/Project-1-us-vnet/subnets/ag-subnet",
+                "etag": "W/\"9824ef9f-6389-44c2-b039-f475fe4f290a\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "10.1.5.0/24",
+                    "applicationGatewayIPConfigurations": [
+                        {
+                            "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/applicationGateways/US-server1/gatewayIPConfigurations/appGatewayIpConfig"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            }
+        ]
+    }
+}

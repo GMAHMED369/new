@@ -1,0 +1,69 @@
+{
+    "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/project-1-us/providers/Microsoft.Network/trafficManagerProfiles/globaltraffic-manager",
+    "name": "globaltraffic-manager",
+    "type": "Microsoft.Network/trafficManagerProfiles",
+    "location": "global",
+    "tags": {},
+    "properties": {
+        "profileStatus": "Enabled",
+        "trafficRoutingMethod": "Geographic",
+        "dnsConfig": {
+            "relativeName": "globaltraffic-manager",
+            "fqdn": "globaltraffic-manager.trafficmanager.net",
+            "ttl": 60
+        },
+        "monitorConfig": {
+            "profileMonitorStatus": "Online",
+            "protocol": "HTTP",
+            "port": 80,
+            "path": "/",
+            "intervalInSeconds": 30,
+            "toleratedNumberOfFailures": 3,
+            "timeoutInSeconds": 10
+        },
+        "endpoints": [
+            {
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/project-1-us/providers/Microsoft.Network/trafficManagerProfiles/globaltraffic-manager/azureEndpoints/agindia",
+                "name": "agindia",
+                "type": "Microsoft.Network/trafficManagerProfiles/azureEndpoints",
+                "properties": {
+                    "endpointStatus": "Enabled",
+                    "endpointMonitorStatus": "Online",
+                    "targetResourceId": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1/providers/Microsoft.Network/publicIPAddresses/ag-india",
+                    "target": "agip.japaneast.cloudapp.azure.com",
+                    "weight": 1,
+                    "priority": 1,
+                    "endpointLocation": "Japan East",
+                    "minChildEndpoints": null,
+                    "minChildEndpointsIPv4": null,
+                    "minChildEndpointsIPv6": null,
+                    "geoMapping": [
+                        "IN"
+                    ]
+                }
+            },
+            {
+                "id": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/project-1-us/providers/Microsoft.Network/trafficManagerProfiles/globaltraffic-manager/azureEndpoints/agus",
+                "name": "agus",
+                "type": "Microsoft.Network/trafficManagerProfiles/azureEndpoints",
+                "properties": {
+                    "endpointStatus": "Enabled",
+                    "endpointMonitorStatus": "Online",
+                    "targetResourceId": "/subscriptions/922d52e5-be6c-4d59-9ee3-16f330528f7c/resourceGroups/Project-1-us/providers/Microsoft.Network/publicIPAddresses/ag-ip-us",
+                    "target": "agus.westus3.cloudapp.azure.com",
+                    "weight": 1,
+                    "priority": 2,
+                    "endpointLocation": "West US 3",
+                    "minChildEndpoints": null,
+                    "minChildEndpointsIPv4": null,
+                    "minChildEndpointsIPv6": null,
+                    "geoMapping": [
+                        "WORLD"
+                    ]
+                }
+            }
+        ],
+        "trafficViewEnrollmentStatus": "Disabled",
+        "maxReturn": 0
+    }
+}
